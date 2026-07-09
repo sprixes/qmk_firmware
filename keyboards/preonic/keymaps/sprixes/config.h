@@ -14,24 +14,29 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "quantum.h"
+#pragma once
 
-#ifdef ENCODER_ENABLE
-bool encoder_update_kb(uint8_t index, bool clockwise) {
-    if (!encoder_update_user(index, clockwise)) { return false; }
-    if (get_highest_layer(layer_state) > 0) {
-        if (clockwise) {
-            tap_code_delay(KC_VOLU, 10);
-        } else {
-            tap_code_delay(KC_VOLD, 10);
-        }
-    } else {
-        if (clockwise) {
-            tap_code(KC_PGDN);
-        } else {
-            tap_code(KC_PGUP);
-        }
-    }
-    return true;
-}
+#define DYNAMIC_KEYMAP_LAYER_COUNT 6
+
+#define NO_DEBUG
+#define NO_PRINT
+#define NO_USB_STARTUP_CHECK
+
+#define MOUSEKEY_INERTIA
+#define MOUSEKEY_DELAY 0
+#define MOUSEKEY_INTERVAL 8
+#define MOUSEKEY_TIME_TO_MAX 64
+#define MOUSEKEY_MAX_SPEED 40
+#define MOUSEKEY_FRICTION  1
+#define MOUSEKEY_MOVE_DELTA 1
+
+#ifdef AUDIO_ENABLE
+  #define STARTUP_SONG SONG(S__NOTE(_E2))
+  #define GOODBYE_SONG SONG(S__NOTE(_C2))
 #endif
+
+// for sanwa keyboard emulation KVM
+// #undef NKRO_ENABLE
+
+#define USB_POLLING_INTERVAL_MS 5
+#define DEBOUNCE 8
