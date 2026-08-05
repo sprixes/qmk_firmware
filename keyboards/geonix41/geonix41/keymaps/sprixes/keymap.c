@@ -46,10 +46,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_GEONIX] = LAYOUT_tkl_ansi(
-        MD_USB,  MD_BLE1, MD_BLE2,   MD_BLE3,  MD_24G,     RM_NEXT,   _______,  _______, _______, _______,  _______,  RM_TOGG,
+        MD_USB,  MD_BLE1, MD_BLE2,   MD_BLE3,  MD_24G,     RGB_MOD,   _______,  _______, _______, _______,  _______,  RGB_RTOG,  
         _______, _______, _______,   _______,  _______,    _______,   _______,  _______, _______, _______,  _______,  _______,  
-        _______, _______, _______,   _______,  _______,    _______,   _______,  _______, _______, _______,  RM_VALU,  LOGO_MOD,
-        _______, QK_DEB,  QK_BAT,    TIME_ST,  _______,    U_EE_CLR,  _______,  _______, _______, RM_SPDD,  RM_VALD,  RM_SPDU
+        _______, _______, _______,   _______,  _______,    _______,   _______,  _______, _______, _______,  RGB_VAI,  LOGO_MOD,
+        _______, QK_DEB,  QK_BAT,    TIME_ST,  _______,    U_EE_CLR,  _______,  _______, _______, RGB_SPD,  RGB_VAD,  RGB_SPI
     )
 };
 
@@ -65,6 +65,6 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     [_NAV]    = { ENCODER_CCW_CW(KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP) },
     [_GAME]   = { ENCODER_CCW_CW(KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP) },
     [_ADJUST] = { ENCODER_CCW_CW(KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP) },
-    [_GEONIX] = { ENCODER_CCW_CW(RM_SATD, RM_SATU) }
+    [_GEONIX] = { ENCODER_CCW_CW(RGB_SAD, RGB_SAI) }
 };
 #endif
