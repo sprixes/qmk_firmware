@@ -63,7 +63,7 @@ enum planck_keycodes {
 
 // macOS Screen capture shortcuts
 #define CAP_LST LGUI(LSFT(KC_7))        // Capture last screen region
-#define CAP_IMG LGUI(LSFT(KC_6))        // Capture portion of screen
+#define CAP_IMG LGUI(LSFT(KC_4))        // Capture portion of screen
 #define CAP_MOV LGUI(LSFT(KC_5))        // Capture video of screen
 
 // Windows/Xbox shortcuts
