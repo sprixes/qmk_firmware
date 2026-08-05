@@ -36,3 +36,5 @@ BLUETOOTH_CUSTOM = yes
 
 ENCODER_MAP_ENABLE = yes    # Enable ENCODER MAP
 DEBOUNCE_TYPE = asym_eager_defer_pk
+
+LDFLAGS += -Wl,--allow-multiple-definition -L$(LIB_PATH)/rdr_lib -lrdrcommon
